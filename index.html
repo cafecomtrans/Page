@@ -1,196 +1,96 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
-	<script type="text/javascript">
-			</script>
-	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<title>Home Page</title>
-	<base href="https://cafecomtrans.free.nf/" />
-	<link rel="canonical" href="https://cafecomtrans.free.nf/" />
-	
-	
-						<meta name="viewport" content="width=device-width, initial-scale=1" />
-					<meta name="description" content="Site Oficial do Cafe com Trans Podcast" />
-			<meta name="keywords" content="cafe com trans,cafe trans,podcast trans,podcast de noticias,podcast trans" />
-			
-	<!-- Facebook Open Graph -->
-		<meta property="og:title" content="Home Page" />
-			<meta property="og:description" content="Site Oficial do Cafe com Trans Podcast" />
-			<meta property="og:image" content="https://cafecomtrans.free.nf/gallery_gen/7dd038219ecbaec546f0ea8128bd147b_fit.jpg" />
-			<meta property="og:type" content="article" />
-			<meta property="og:url" content="https://cafecomtrans.free.nf/" />
-		<!-- Facebook Open Graph end -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Café com Trans</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Helvetica Neue', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      background-image: url('fondo-acuarela-azul-rosa_125540-1211.avif');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      min-height: 100vh;
+      padding: 20px;
+      backdrop-filter: brightness(1.1);
+    }
 
-		<meta name="generator" content="Site.pro Website builder" />
-			<script src="js/common-bundle.js?ts=20250702125106" type="text/javascript"></script>
-	<script src="js/a1973083a2fe006094b696d72c1430cd-bundle.js?ts=20250702125106" type="text/javascript"></script>
-	<link href="css/common-bundle.css?ts=20250702125106" rel="stylesheet" type="text/css" />
-	<link href="https://fonts.googleapis.com/css?family=Karla:700,700i,400,400i&amp;subset=latin-ext,latin" rel="stylesheet" type="text/css" />
-	<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,700,700i,400i&amp;subset=cyrillic,cyrillic-ext,latin-ext,vietnamese,latin" rel="stylesheet" type="text/css" />
-	<link href="css/a1973083a2fe006094b696d72c1430cd-bundle.css?ts=20250702125106" rel="stylesheet" type="text/css" id="wb-page-stylesheet" />
-	<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="gallery/favicons/favicon-120x120.png"><link rel="icon" type="image/png" sizes="120x120" href="gallery/favicons/favicon-120x120.png"><link rel="apple-touch-icon" type="image/png" sizes="152x152" href="gallery/favicons/favicon-152x152.png"><link rel="icon" type="image/png" sizes="152x152" href="gallery/favicons/favicon-152x152.png"><link rel="apple-touch-icon" type="image/png" sizes="180x180" href="gallery/favicons/favicon-180x180.png"><link rel="icon" type="image/png" sizes="180x180" href="gallery/favicons/favicon-180x180.png"><link rel="icon" type="image/png" sizes="192x192" href="gallery/favicons/favicon-192x192.png"><link rel="apple-touch-icon" type="image/png" sizes="60x60" href="gallery/favicons/favicon-60x60.png"><link rel="icon" type="image/png" sizes="60x60" href="gallery/favicons/favicon-60x60.png"><link rel="apple-touch-icon" type="image/png" sizes="76x76" href="gallery/favicons/favicon-76x76.png"><link rel="icon" type="image/png" sizes="76x76" href="gallery/favicons/favicon-76x76.png"><link rel="icon" type="image/png" href="gallery/favicons/favicon.png"><meta name="google-site-verification" content="" />
-	<script type="text/javascript">
-	window.useTrailingSlashes = false;
-	window.disableRightClick = false;
-	window.currLang = 'en';
-</script>
-		
-	<!--[if lt IE 9]>
-	<script src="js/html5shiv.min.js"></script>
-	<![endif]-->
+    h1 {
+      margin-top: 20px;
+      font-size: 2.5em;
+      color: #222;
+      background-color: rgba(255,255,255,0.7);
+      padding: 10px 20px;
+      border-radius: 12px;
+    }
 
-		<script type="text/javascript">
-		$(function () {
-});    </script>
+    .player {
+      max-width: 800px;
+      width: 100%;
+      margin: 20px 0;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+      border-radius: 12px;
+      overflow: hidden;
+      background: rgba(255, 255, 255, 0.85);
+    }
+
+    iframe {
+      width: 100%;
+      height: 200px;
+      border: none;
+    }
+
+    @media (min-width: 600px) {
+      iframe {
+        height: 400px;
+      }
+    }
+
+    .btn-entrar {
+      margin-top: 30px;
+      padding: 15px 30px;
+      font-size: 1.2em;
+      border: none;
+      border-radius: 30px;
+      background-color: #f5a9b8;
+      color: #222;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      transition: all 0.3s ease;
+    }
+
+    .btn-entrar:hover {
+      background-color: #5bcffb;
+      color: #000;
+    }
+  </style>
 </head>
+<body>
 
+  <h1>🎙️ Café com Trans</h1>
 
-<body class="site site-lang-en " ><style type="text/css">
-.df36f7498-close {
-	position: absolute;
-	display: block;
-	right: 30px;
-	font-size: 25px;
-	cursor: pointer;
-}
-.df36f7498-close::before {
-	content: '×';
-}
-.df36f7498-top {
-	z-index: 99999;
-	position: relative;
-	width: 100%;
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: center;
-	align-items: center;
-	background-color: #fff;
-	padding: 15px;
-	border: 2px solid #000;
-	font-size: 14px;
-	color: #333;
-}
-.df36f7498-top .df36f7498-close {
-	color: #333;
-}
-.df36f7498-top-logo {
-	text-decoration: none;
-	font-weight: normal;
-}
-.df36f7498-top-logo img {
-	height: 24px;
-	margin-top: -4px;
-}
-.df36f7498-top-text {
-	margin: 5px 35px;
-	text-align: center;
-}
-.df36f7498-bottom {
-	z-index: 99999;
-	position: relative;
-	width: 100%;
-	display: flex;
-	flex-direction: column;
-	flex-wrap: wrap;
-	justify-content: center;
-	align-items: stretch;
-	text-align: center;
-	padding: 12px 15px;
-	font-size: 14px;
-	color: #F5EBE0;
-	background-color: #CFAFAF;
-}
-.df36f7498-bottom .df36f7498-close {
-	top: 14px;
-	color: #F5EBE0;
-}
-.df36f7498-bottom hr {
-	display: block;
-	font-size: 1px;
-	line-height: 1px;
-	overflow: hidden;
-	padding: 0;
-	margin: 16px 16px 12px;
-	border-top: 1px solid #F5EBE0;
-	border-bottom: none;
-	border-right: none;
-	border-left: none;
-	border-radius: 0;
-}
-.df36f7498-bottom-text-a,
-.df36f7498-bottom-text-b {
-	padding: 3px 0;
-	text-align: center;
-}
-.df36f7498-bottom-text-a {
-	padding-left: 36px;
-	padding-right: 36px;
-}
-.df36f7498-bottom-text-a hr {
-	margin-left: -20px;
-	margin-right: -20px;
-}
+  <div class="player">
+    <iframe src="https://www.youtube.com/embed/RhcC9IlhLKk" allowfullscreen></iframe>
+  </div>
 
-.df36f7498-bottom-text-a a,
-.df36f7498-bottom-text-a a:hover,
-.df36f7498-bottom-text-a a:active,
-.df36f7498-bottom-text-a a:visited,
-.df36f7498-bottom-text-b a,
-.df36f7498-bottom-text-b a:hover,
-.df36f7498-bottom-text-b a:active,
-.df36f7498-bottom-text-b a:visited {
-	text-decoration: underline;
-	color: #F5EBE0;
-}
-</style>
-<script type="text/javascript">
-	window.addEventListener("DOMContentLoaded", function() {
-		var elem = $(".df36f7498-bottom");
-		if (elem.length > 0) {
-			var topElem = $(".df36f7498-top").parent();
-			if (topElem.length) {
-				topElem.append(elem);
-				elem[0].style.display = '';
-			}
-			else if (document.body) {
-				document.body.appendChild(elem[0]);
-				elem[0].style.display = '';
-			}
-		}
-	});
-</script>
-<div class="df36f7498-top">
-	<a class="df36f7498-top-logo" href="https://cafecomtrans.com.br?utm_source=b2c&amp;utm_medium=free&amp;utm_campaign=logo" target="_blank"
-		title="Professional Website Builder">
-		<img src="https://cafecomtrans.com.br/assets/img/sitepro-logo-black.svg" alt="Cafe Com Trans"/>
-	</a>
-	<div class="df36f7498-top-text">Cafe com Trans e uma marca registrada desde 2020</div>
-	<a class="btn btn-success" href="https://cafecomtrans.com.br?utm_source=b2c&amp;utm_medium=free&amp;utm_campaign=create" target="_blank" title="Create New Website">Create New Website</a>	<a class="df36f7498-close" href="https://site.pro/FAQ/Website-Builder-Website-creation/How-to-remove-ads-if-youre-using-3rd-party-hosting-provider/" target="_blank"
-		title="If you are an owner of this website – please upgrade to remove ads"></a>
-</div>
-<div class="df36f7498-bottom" style="display: none;">
-	<div class="df36f7498-bottom-text-a"><b>Website Created With Site.pro Website Builder</b><br/><a href="https://site.pro/FAQ/Website-Builder-Website-creation/How-to-remove-ads-if-youre-using-3rd-party-hosting-provider/" target="_blank" title="How to remove Ads?">How to remove Ads?</a><hr/></div>
-	<div class="df36f7498-bottom-text-b"><a href="https://cafecomtrans.com.br/&amp;utm_medium=free&amp;utm_campaign=builder" target="_blank" title="Professional Website Builder">Professional Website Builder</a>. <a href="https://site.pro/White-Label/?utm_source=b2c&amp;utm_medium=free&amp;utm_campaign=white" target="_blank" title="White Label Website Builder">White Label Website Builder</a>. <a href="https://site.pro/Collaboration/?utm_source=b2c&amp;utm_medium=free&amp;utm_campaign=collaboration" target="_blank" title="Create Website Together">Create Website Together</a></div>
-	<a class="df36f7498-close" href="http://cafecomtrans.com.br/" target="_blank"
-		title="If you are an owner of this website – please upgrade to remove ads"></a>
-</div>
-<div id="wb_root" class="root wb-layout-vertical"><div class="wb_sbg"></div><div id="wb_header_a1973083a2fe006094b696d72c1430cd" class="wb_element wb-layout-element" data-plugin="LayoutElement"><div class="wb_content wb-layout-vertical"><div id="a19730839f880369bbdfe54880fa2d88" class="wb_element wb-layout-element" data-plugin="LayoutElement"><div class="wb_content wb-layout-vertical"><div id="a19730839f880407228050e3cf77f0b7" class="wb_element wb-layout-element" data-plugin="LayoutElement"><div class="wb_content wb-layout-vertical"><div id="a19730839f8805facb515409ef5d145d" class="wb_element wb-layout-element" data-plugin="LayoutElement"><div class="wb_content wb-layout-vertical"><div id="a19730839f88061e8abd34e3e0498b04" class="wb_element wb-layout-element" data-plugin="LayoutElement"><div class="wb_content wb-layout-horizontal"><div id="a19730839f8807e7a8308013f4c3abe0" class="wb_element wb-layout-element" data-plugin="LayoutElement"><div class="wb_content wb-layout-vertical"><div id="a19730839f880834817a0638c979630b" class="wb_element wb-layout-element" data-plugin="LayoutElement"><div class="wb_content wb-layout-vertical"><div id="a19730839f88099f41be7ee4be4afe2c" class="wb_element wb_text_element" data-plugin="TextArea" style=" line-height: normal;"><h2 class="wb-stl-custom1" data-dnid="10347"><a href="">Café com Trans</a></h2></div></div></div></div></div><div id="a19730839f880aed8058e5b2285c609f" class="wb_element wb-layout-element" data-plugin="LayoutElement"><div class="wb_content wb-layout-vertical"><div id="a19730839f880be7263034db8695f12a" class="wb_element wb-menu wb-prevent-layout-click wb-menu-mobile" data-plugin="Menu"><a class="btn btn-default btn-collapser"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><ul class="hmenu" dir="ltr"><li class="wb_this_page_menu_item active"><a href="https://cafecomtrans.free.nf/">Inicio</a></li></ul><div class="clearfix"></div></div></div></div></div></div></div></div></div></div></div></div></div></div><div id="wb_main_a1973083a2fe006094b696d72c1430cd" class="wb_element wb-layout-element" data-plugin="LayoutElement"><div class="wb_content wb-layout-vertical"><div id="a19730839f880db20fea6deafac2ce7c" class="wb_element wb-layout-element" data-plugin="LayoutElement"><div class="wb_content wb-layout-vertical"><div id="a19730839f880ee2516bd15b552d7abc" class="wb_element wb-layout-element" data-plugin="LayoutElement"><div class="wb_content wb-layout-vertical"><div id="a19730839f880fc64d0ddb148f19f909" class="wb_element wb-layout-element" data-plugin="LayoutElement"><div class="wb_content wb-layout-vertical"><div id="a19730839f88107f573094354a9aaa50" class="wb_element wb-layout-element" data-plugin="LayoutElement"><div class="wb_content wb-layout-vertical"><div id="a19730839f881109f6136d61d95ee653" class="wb_element wb_text_element" data-plugin="TextArea" style=" line-height: normal;"><h1 class="wb-stl-custom2" data-dnid="10356">Café com Trans</h1></div></div></div><div id="a19730839f8812f183ad2bea2cf7fbca" class="wb_element wb_text_element" data-plugin="TextArea" style=" line-height: normal;"><p class="wb-stl-custom3" data-dnid="10324">O primeiro podcast com a tematica transgeneridade        por Amanda Gutierrez<span data-dnid="10412" style="font-size: 14px"><br></span><br><br><br><br><br><span data-dnid="10367" style="font-size: 14px">Conteudo apenas para maiores de idade, se voce tem mais de 18 anos, </span><br><span data-dnid="10370" style="font-size: 14px">clique no botao abaixo:</span></p></div></div></div><div id="a19730839f8813f38817a38f899abd91" class="wb_element wb-layout-element" data-plugin="LayoutElement"><div class="wb_content wb-layout-horizontal"><div id="a1973086f305000b19a1afc44a2bb6c3" class="wb_element wb_element_picture" data-plugin="Picture" title=""><div class="wb_picture_wrap"><div class="wb-picture-wrapper"><a href="https://cafecomtrans.wordpress.com/"><img loading="lazy" alt="" src="gallery_gen/1b54a844a983f8210b553fcc04bba2c3_fit.png?ts=1751449867"></a></div></div></div></div></div></div></div></div></div><div id="a19730839f881524bacabfcef9f65482" class="wb_element wb-layout-element" data-plugin="LayoutElement"><div class="wb_content wb-layout-vertical"><div id="a19730839f88167c17d909bff2ea500e" class="wb_element wb-layout-element" data-plugin="LayoutElement"><div class="wb_content wb-layout-vertical"><div id="a197308b6d7e0050552f59d7fafd05f3" class="wb_element wb-layout-element" data-plugin="LayoutElement"><div class="wb_content wb-layout-horizontal"><div id="a19730880b5300b7e40cbfe1ba03423b" class="wb_element wb_element_picture" data-plugin="Picture" title=""><div class="wb_picture_wrap"><div class="wb-picture-wrapper"><a href="https://www.instagram.com/cafecomtransofc"><img loading="lazy" alt="" src="gallery/Captura%20de%20pantalla%202025-06-02%20a%20las%2014.03.16.png?ts=1751449867"></a></div></div></div></div></div><div id="a19730839f8817cd8b834d75e8b30a45" class="wb_element wb-layout-element" data-plugin="LayoutElement"><div class="wb_content wb-layout-vertical"><div id="a19730839f8818e30a5bc80ace9124bd" class="wb_element wb-layout-element" data-plugin="LayoutElement"><div class="wb_content wb-layout-horizontal"><div id="a19730839f881bf7cbee03af7ca95cd7" class="wb_element wb-layout-element" data-plugin="LayoutElement"><div class="wb_content wb-layout-horizontal"></div></div></div></div></div></div></div></div></div></div><div id="a19730839f881f6949bcb0552cff0f83" class="wb_element wb-layout-element" data-plugin="LayoutElement"><div class="wb_content wb-layout-vertical"><div id="a19730839f8820d0bd42baa104112749" class="wb_element wb-layout-element" data-plugin="LayoutElement"><div class="wb_content wb-layout-vertical"><div id="a19730839f882129cdfca716b7157688" class="wb_element wb-layout-element" data-plugin="LayoutElement"><div class="wb_content wb-layout-vertical"><div id="a19730839f8822866c2c0e3e3ed3e01f" class="wb_element wb-layout-element" data-plugin="LayoutElement"><div class="wb_content wb-layout-vertical"><div id="a19730839f8823e299bbcf92a739c2b1" class="wb_element wb_text_element" data-plugin="TextArea" style=" line-height: normal;"><h2 class="wb-stl-custom4" data-dnid="10376">Palavras chave</h2></div></div></div><div id="a197ca89d04600373944a8b7748e944e" class="wb_element" data-plugin="Youtube"><iframe title="YouTube video player" class="youtube-player" allowfullscreen="" data-defer-load="Youtube" data-src="//www.youtube.com/embed/RhcC9IlhLKk?controls=1" frameborder="0"></iframe></div></div></div></div></div></div></div></div></div><div id="wb_footer_a1973083a2fe006094b696d72c1430cd" class="wb_element wb-layout-element" data-plugin="LayoutElement"><div class="wb_content wb-layout-vertical"><div id="a19730839f88259deb95ff94918313f9" class="wb_element wb-layout-element" data-plugin="LayoutElement"><div class="wb_content wb-layout-vertical"><div id="a19730839f8826842fc973cccd723662" class="wb_element wb-layout-element" data-plugin="LayoutElement"><div class="wb_content wb-layout-vertical"><div id="a19730839f8827df3ccf8705d63aad02" class="wb_element wb-layout-element" data-plugin="LayoutElement"><div class="wb_content wb-layout-vertical"><div id="a19730839f882894e98267852be55877" class="wb_element wb-layout-element" data-plugin="LayoutElement"><div class="wb_content wb-layout-horizontal"><div id="a19730839f8829cf243bb58246650df8" class="wb_element wb-layout-element" data-plugin="LayoutElement"><div class="wb_content wb-layout-vertical"><div id="a19730839f882a0d63435c59bdae2576" class="wb_element wb_text_element" data-plugin="TextArea" style=" line-height: normal;"><p class="wb-stl-custom6" data-dnid="10280"><a href="tel:+34 672-848-565">+34 672-848-565</a></p></div></div></div><div id="a19730839f882b8157e73f7d3cfde2b3" class="wb_element wb-layout-element" data-plugin="LayoutElement"><div class="wb_content wb-layout-vertical"><div id="a19730839f882c28fe20e827c899fc63" class="wb_element wb-layout-element" data-plugin="LayoutElement"><div class="wb_content wb-layout-vertical"><div id="a19730839f882d7d8fcc6f00449236c1" class="wb_element wb_text_element" data-plugin="TextArea" style=" line-height: normal;"><p class="wb-stl-custom7" data-dnid="10453">© Cafe com Trans é uma marca registrada desde 2020</p></div></div></div></div></div></div></div></div></div><div id="a19730839f882e960c299b17f3cb5a26" class="wb_element wb-layout-element" data-plugin="LayoutElement"><div class="wb_content wb-layout-horizontal"><div id="a19730839f882f260f842228c5f3e5c3" class="wb_element wb_text_element" data-plugin="TextArea" style=" line-height: normal;"><p class="wb-stl-custom8" data-auto-wrapper="true"><a href="cookie-policy">Política de cookies</a></p></div></div></div></div></div></div></div><div id="wb_footer_c" class="wb_element" data-plugin="WB_Footer" style="text-align: center; width: 100%;"><div class="wb_footer"></div><script type="text/javascript">
-			$(function() {
-				var footer = $(".wb_footer");
-				var html = (footer.html() + "").replace(/^\s+|\s+$/g, "");
-				if (!html) {
-					footer.parent().remove();
-					footer = $("#footer, #footer .wb_cont_inner");
-					footer.css({height: ""});
-				}
-			});
-			</script></div></div></div><footer>
-    <p>© 2025 Café com Trans</p>
-    <div class="footer-player">
-      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/1L8fqj2umqryEpcCYeJs8m?utm_source=generator&amp;theme=0" width="100%" height="152" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
-      </iframe>
-    </div>
-  </footer></div></body>
+  <div class="player">
+    <iframe 
+      src="https://open.spotify.com/embed/show/5Yv4LsreNgdPiOKzNUWwVG?utm_source=generator" 
+      width="100%" 
+      height="152" 
+      frameBorder="0" 
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+      loading="lazy">
+    </iframe>
+  </div>
+
+  <button class="btn-entrar" onclick="alert('Em breve!')">Entrar no site</button>
+
+</body>
 </html>
