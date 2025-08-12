@@ -1,205 +1,191 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Café com Trans</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Helvetica Neue', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      background-image: url('background.jpeg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      min-height: 100vh;
+      padding: 20px;
+      backdrop-filter: brightness(1.1);
+    }
 
-  <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-MBKH4NN6');</script>
-  <!-- End Google Tag Manager -->
+    h1 {
+      margin-top: 20px;
+      font-size: 2.5em;
+      color: #222;
+      background-color: rgba(255,255,255,0.7);
+      padding: 10px 20px;
+      border-radius: 12px;
+    }
 
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Café com Trans</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Helvetica Neue', sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      background-image: url('background.jpeg');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      min-height: 100vh;
-      padding: 20px;
-      backdrop-filter: brightness(1.1);
-    }
+    .player {
+      max-width: 800px;
+      width: 100%;
+      margin: 20px 0;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+      border-radius: 12px;
+      overflow: hidden;
+      background: rgba(255, 255, 255, 0.85);
+    }
 
-    h1 {
-      margin-top: 20px;
-      font-size: 2.5em;
-      color: #222;
-      background-color: rgba(255,255,255,0.7);
-      padding: 10px 20px;
-      border-radius: 12px;
-    }
+    iframe {
+      border: none;
+    }
 
-    .player {
-      max-width: 800px;
-      width: 100%;
-      margin: 20px 0;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-      border-radius: 12px;
-      overflow: hidden;
-      background: rgba(255, 255, 255, 0.85);
-    }
+    .spotify-player {
+      width: 100%;
+      height: 80px;
+      border-radius: 12px;
+    }
 
-    iframe {
-      border: none;
-    }
+    .youtube-player {
+      width: 100%;
+      height: 400px;
+      border-radius: 12px;
+    }
 
-    .spotify-player {
-      width: 100%;
-      height: 80px;
-      border-radius: 12px;
-    }
+    .btn-entrar {
+      margin-top: 30px;
+      padding: 15px 30px;
+      font-size: 1.2em;
+      border: none;
+      border-radius: 30px;
+      background-color: #f5a9b8;
+      color: #222;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      transition: all 0.3s ease;
+    }
 
-    .youtube-player {
-      width: 100%;
-      height: 400px;
-      border-radius: 12px;
-    }
+    .btn-entrar:hover {
+      background-color: #5bcffb;
+      color: #000;
+    }
 
-    .btn-entrar {
-      margin-top: 30px;
-      padding: 15px 30px;
-      font-size: 1.2em;
-      border: none;
-      border-radius: 30px;
-      background-color: #f5a9b8;
-      color: #222;
-      cursor: pointer;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-      transition: all 0.3s ease;
-    }
+    /* Estilo para o bloco dos ícones */
+    .icons-container {
+      margin-top: 30px;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      max-width: 500px;
+    }
 
-    .btn-entrar:hover {
-      background-color: #5bcffb;
-      color: #000;
-    }
+    .icons-container p {
+      font-family: Arial, sans-serif;
+      color: #888;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
 
-    /* 🔥 EFEITO HOVER DESTACADO 🔥 */
-    .icons-container a img {
-      width: 36px;
-      height: 36px;
-      border-radius: 12px;
-      padding: 6px;
-      background-clip: padding-box;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
+    .icons-container div {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
 
-    .icons-container a img:hover {
-      transform: scale(1.4); /* 👈 Aqui o ícone cresce */
-      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.35);
-    }
-    /* 🔥 FIM DO EFEITO HOVER 🔥 */
+    /* Efeito hover nos ícones - padding uniforme e transformação */
+    .icons-container a img {
+      width: 36px;
+      height: 36px;
+      border-radius: 12px;
+      padding: 6px;
+      background-clip: padding-box;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
 
-    .icons-container {
-      margin-top: 30px;
-      padding: 20px;
-      border: 1px solid #ddd;
-      border-radius: 10px;
-      max-width: 500px;
-    }
-
-    .icons-container p {
-      font-family: Arial, sans-serif;
-      color: #888;
-      font-weight: bold;
-      margin-bottom: 10px;
-    }
-
-    .icons-container div {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-  </style>
+    .icons-container a img:hover {
+      transform: scale(1.4);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.35);
+    }
+  </style>
 </head>
 <body>
 
-  <h1>🎙️ Café com Trans</h1>
+  <h1>🎙️ Café com Trans</h1>
 
-  <!-- Bloco de dados do podcast -->
-  <a href="https://rephonic.com/podcasts/diva-trans-podcastchy" target="_blank" style="text-decoration: none; color: inherit;"> 
-    <div style="border: 2px solid #ccc; padding: 20px; margin-top: 30px; max-width: 600px; background-color: #f9f9f9; border-radius: 10px;">
-      <h3 style="margin-top: 0;">📊 Dados do Podcast (via Rephonic)</h3>
-      <ul style="list-style: none; padding-left: 0; font-family: sans-serif; line-height: 1.6;">
-        <li><strong>Nome:</strong> Café com Trans</li>
-        <li><strong>Host:</strong> Diva Trans</li>
-        <li><strong>Idioma:</strong> Português</li>
-        <li><strong>Categorias:</strong> Comédia, Entrevistas</li>
-        <li><strong>Frequência:</strong> Mensal</li>
-        <li><strong>Número de episódios:</strong> 67</li>
-        <li><strong>Fundado há:</strong> 5 anos</li>
-        <li><strong>Avaliações:</strong> 7 ratings</li>
-        <li><strong>Transcrições:</strong> Disponível (via Rephonic)</li>
-        <li><strong>Dados disponíveis:</strong> O primeiro episódio foi lançado em 11 de junho de 2020.</li>
-      </ul>
-      <p style="font-size: 13px; color: #555; margin-top: 10px;"><em>Clique para ver diretamente no site Rephonic</em></p>
-    </div>
-  </a>
+  <!-- Bloco de dados do podcast do Rephonic -->
+  <a href="https://rephonic.com/podcasts/diva-trans-podcastchy" target="_blank" style="text-decoration: none; color: inherit;">
+    <div style="border: 2px solid #ccc; padding: 20px; margin-top: 30px; max-width: 600px; background-color: #f9f9f9; border-radius: 10px;">
+      <h3 style="margin-top: 0;">📊 Dados do Podcast (via Rephonic)</h3>
+      <ul style="list-style: none; padding-left: 0; font-family: sans-serif; line-height: 1.6;">
+        <li><strong>Nome:</strong> Café com Trans</li>
+        <li><strong>Host:</strong> Diva Trans</li>
+        <li><strong>Idioma:</strong> Português</li>
+        <li><strong>Categorias:</strong> Comédia, Entrevistas</li>
+        <li><strong>Frequência:</strong> Mensal</li>
+        <li><strong>Número de episódios:</strong> 67</li>
+        <li><strong>Fundado há:</strong> 5 anos</li>
+        <li><strong>Avaliações:</strong> 7 ratings</li>
+        <li><strong>Transcrições:</strong> Disponível (via Rephonic)</li>
+        <li><strong>Dados disponíveis:</strong> O primeiro episódio de Café com Trans - Diva Trans foi lançado em 11 de junho de 2020.</li>
+      </ul>
+      <p style="font-size: 13px; color: #555; margin-top: 10px;"><em>Clique para ver diretamente no site Rephonic</em></p>
+    </div>
+  </a>
 
-  <!-- Ícones -->
-  <div class="icons-container">
-    <p>LISTEN TO THIS PODCAST</p>
-    <div>
-      <!-- Aqui entram todos os <a><img></a> dos ícones como no seu código -->
-      <!-- Exemplo -->
-      <a href="https://open.spotify.com/show/1L8fqj2umqryEpcCYeJs8m" target="_blank">
-        <img src="spotify.jpg" style="background-color:#1DB954;" alt="Spotify">
-      <a href="https://podcasts.apple.com/es/podcast/caf%C3%A9-com-trans-diva-trans/id1522240006?ct=rephonic&uo=4" target="_blank"><img src="apple.jpg" style="background-color:#a144f3;" alt="Apple Podcasts"></a>
-      <a href="https://open.spotify.com/show/1L8fqj2umqryEpcCYeJs8m" target="_blank"><img src="spotify.jpg" style="background-color:#1DB954;" alt="Spotify"></a>
-      <a href="https://podcastaddict.com/podcast/cafe-com-trans-diva-trans/4502100" target="_blank"><img src="podaddict.jpg" style="background-color:#f57c00;" alt="Podcast Addict"></a>
-      <a href="https://ivy.fm/podcast/cafe-com-sociologia-155367" target="_blank"><img src="ivy.jpg" style="background-color:#a144f3;" alt="Ivy FM Podcasts"></a>
-      <a href="https://music.amazon.es/podcasts/e679db55-0c7c-4249-9709-7d8cf20c697c/caf%C3%A9-com-trans---diva-trans" target="_blank"><img src="amazon.jpg" style="background-color:#e53935;" alt="Amazon Music"></a>
-      <a href="https://pocketcasts.com/podcasts/38dcac10-f97d-0139-d507-0acc26574db2" target="_blank"><img src="pocketcasts.jpg" style="background-color:#e53935;" alt="Pocket Casts"></a>
-      <a href="https://goodpods.app.link/HgUWFMZCOLb" target="_blank"><img src="goodpods.jpg" style="background-color:#b71c1c;" alt="Goodpods"></a>
-      <a href="https://castbox.fm/channel/id6340550?country=br" target="_blank"><img src="castbox.jpg" style="background-color:#b71c1c;" alt="CastBox"></a>
-      <a href="https://music.youtube.com/playlist?list=PLuAl7puBMM42jqzZQ2fCtW4RJXS6lR9qd" target="_blank"><img src="https://img.icons8.com/ios-filled/50/ffffff/youtube-play.png" style="background-color:#ff0000;" alt="YouTube Music"></a>
-      <a href="https://anchor.fm/s/2db555cc/podcast/rss" target="_blank"><img src="https://img.icons8.com/ios-filled/50/ffffff/rss.png" style="background-color:#ff9800;" alt="RSS Feed"></a>
-      <a href="https://www.podbean.com/podcast-detail/x7utj-101ab5/Caf%C3%A9-com-Trans---Diva-Trans-Podcast" target="_blank"><img src="https://img.icons8.com/ios-filled/50/ffffff/cloud.png" style="background-color:#4caf50;" alt="Podbean"></a>
-      <a href="https://podcastrepublic.net/podcast/1522240006" target="_blank"><img src="https://img.icons8.com/ios-filled/50/ffffff/podcast.png" style="background-color:#ff5722;" alt="Podcast Republic"></a>
-      <a href="https://www.deezer.com/br/show/1002034921" target="_blank"><img src="deezer.jpg" style="background-color:#a144f3;" alt="Deezer"></a>
-      <a href="https://www.iheart.com/podcast/269-cafe-com-trans-diva-trans-69157550/" target="_blank"><img src="iheart.jpg" style="background-color:#a144f3;" alt="iHeart Podcasts"></a>
-      <a href="https://overcast.fm/itunes1522240006/diva-trans-podcastchy" target="_blank"><img src="overcast.jpg" style="background-color:#a144f3;" alt="Overcast Podcasts"></a>
-      <a href="https://radiopublic.com/diva-trans-podcastchy-6nnOP1" target="_blank"><img src="radiopublic.jpg" style="background-color:#a144f3;" alt="RadioPublic Podcasts"></a>
-      <a href="https://tunein.com/podcasts/Comedy/Caf%c3%a9-com-Trans-p1375774/" target="_blank"><img src="tunein.jpg" style="background-color:#a144f3;" alt="TuneIn Podcasts"></a>
-      <a href="https://podimo.com/es/shows/cafe-com-trans-diva-trans" target="_blank"><img src="podimo.jpg" style="background-color:#a144f3;" alt="Podimo Podcasts"></a>
-      <a href="https://player.fm/series/cafe-com-trans-diva-trans" target="_blank"><img src="playerfm.jpg" style="background-color:#a144f3;" alt="Player FM"></a>
-      <a href="https://www.podengine.ai/podcasts/cafe-com-trans-diva-trans" target="_blank"><img src="podengine.jpg" style="background-color:#a144f3;" alt="Podengine"></a>
-        
-      </a>
-    </div>
-  </div>
+  <!-- Bloco de plataformas com ícones -->
+  <div class="icons-container">
+    <p>LISTEN TO THIS PODCAST</p>
+    <div>
+      <a href="https://podcasts.apple.com/es/podcast/caf%C3%A9-com-trans-diva-trans/id1522240006?ct=rephonic&uo=4" target="_blank"><img src="apple.jpg" style="background-color:#a144f3;" alt="Apple Podcasts"></a>
+      <a href="https://open.spotify.com/show/1L8fqj2umqryEpcCYeJs8m" target="_blank"><img src="spotify.jpg" style="background-color:#1DB954;" alt="Spotify"></a>
+      <a href="https://podcastaddict.com/podcast/cafe-com-trans-diva-trans/4502100" target="_blank"><img src="podaddict.jpg" style="background-color:#f57c00;" alt="Podcast Addict"></a>
+      <a href="https://ivy.fm/podcast/cafe-com-sociologia-155367" target="_blank"><img src="ivy.jpg" style="background-color:#a144f3;" alt="Ivy FM Podcasts"></a>
+      <a href="https://music.amazon.es/podcasts/e679db55-0c7c-4249-9709-7d8cf20c697c/caf%C3%A9-com-trans---diva-trans" target="_blank"><img src="amazon.jpg" style="background-color:#e53935;" alt="Amazon Music"></a>
+      <a href="https://pocketcasts.com/podcasts/38dcac10-f97d-0139-d507-0acc26574db2" target="_blank"><img src="pocketcasts.jpg" style="background-color:#e53935;" alt="Pocket Casts"></a>
+      <a href="https://goodpods.app.link/HgUWFMZCOLb" target="_blank"><img src="goodpods.jpg" style="background-color:#b71c1c;" alt="Goodpods"></a>
+      <a href="https://castbox.fm/channel/id6340550?country=br" target="_blank"><img src="castbox.jpg" style="background-color:#b71c1c;" alt="CastBox"></a>
+      <a href="https://music.youtube.com/playlist?list=PLuAl7puBMM42jqzZQ2fCtW4RJXS6lR9qd" target="_blank"><img src="https://img.icons8.com/ios-filled/50/ffffff/youtube-play.png" style="background-color:#ff0000;" alt="YouTube Music"></a>
+      <a href="https://anchor.fm/s/2db555cc/podcast/rss" target="_blank"><img src="https://img.icons8.com/ios-filled/50/ffffff/rss.png" style="background-color:#ff9800;" alt="RSS Feed"></a>
+      <a href="https://www.podbean.com/podcast-detail/x7utj-101ab5/Caf%C3%A9-com-Trans---Diva-Trans-Podcast" target="_blank"><img src="https://img.icons8.com/ios-filled/50/ffffff/cloud.png" style="background-color:#4caf50;" alt="Podbean"></a>
+      <a href="https://podcastrepublic.net/podcast/1522240006" target="_blank"><img src="https://img.icons8.com/ios-filled/50/ffffff/podcast.png" style="background-color:#ff5722;" alt="Podcast Republic"></a>
+      <a href="https://www.deezer.com/br/show/1002034921" target="_blank"><img src="deezer.jpg" style="background-color:#a144f3;" alt="Deezer"></a>
+      <a href="https://www.iheart.com/podcast/269-cafe-com-trans-diva-trans-69157550/" target="_blank"><img src="iheart.jpg" style="background-color:#a144f3;" alt="iHeart Podcasts"></a>
+      <a href="https://overcast.fm/itunes1522240006/diva-trans-podcastchy" target="_blank"><img src="overcast.jpg" style="background-color:#a144f3;" alt="Overcast Podcasts"></a>
+      <a href="https://radiopublic.com/diva-trans-podcastchy-6nnOP1" target="_blank"><img src="radiopublic.jpg" style="background-color:#a144f3;" alt="RadioPublic Podcasts"></a>
+      <a href="https://tunein.com/podcasts/Comedy/Caf%c3%a9-com-Trans-p1375774/" target="_blank"><img src="tunein.jpg" style="background-color:#a144f3;" alt="TuneIn Podcasts"></a>
+      <a href="https://podimo.com/es/shows/cafe-com-trans-diva-trans" target="_blank"><img src="podimo.jpg" style="background-color:#a144f3;" alt="Podimo Podcasts"></a>
+      <a href="https://player.fm/series/cafe-com-trans-diva-trans" target="_blank"><img src="playerfm.jpg" style="background-color:#a144f3;" alt="Player FM"></a>
+      <a href="https://www.podengine.ai/podcasts/cafe-com-trans-diva-trans" target="_blank"><img src="podengine.jpg" style="background-color:#a144f3;" alt="Podengine"></a>
+    </div>
+  </div>
 
-  <!-- Player YouTube -->
-  <div class="player">
-    <iframe class="youtube-player"
-      src="https://www.youtube.com/embed/RhcC9IlhLKk"
-      allowfullscreen>
-    </iframe>
-  </div>
+  <!-- Player YouTube -->
+  <div class="player">
+    <iframe class="youtube-player"
+      src="https://www.youtube.com/embed/RhcC9IlhLKk"
+      allowfullscreen>
+    </iframe>
+  </div>
 
-  <!-- Player Spotify -->
-  <div class="player">
-    <iframe class="spotify-player"
-      src="https://open.spotify.com/embed/show/1L8fqj2umqryEpcCYeJs8m?utm_source=generator&theme=0"
-      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-      loading="lazy">
-    </iframe>
-  </div>
+  <!-- Player Spotify Compacto -->
+  <div class="player">
+    <iframe class="spotify-player"
+      src="https://open.spotify.com/embed/show/1L8fqj2umqryEpcCYeJs8m?utm_source=generator&theme=0"
+      frameborder="0"
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+      loading="lazy">
+    </iframe>
+  </div>
 
-  <button class="btn-entrar" onclick="window.location.href='https://cafecomtrans.wordpress.com'">Entrar no site</button>
+  <button class="btn-entrar" onclick="window.location.href='https://cafecomtrans.wordpress.com'">Entrar no site</button>
 
-  <p style="margin-top: 40px; font-size: 0.9em; color: #333; background-color: rgba(255,255,255,0.6); padding: 10px 20px; border-radius: 12px;">
-    Café com Trans é uma marca registrada desde 2020
-  </p>
+  <p style="margin-top: 40px; font-size: 0.9em; color: #333; background-color: rgba(255,255,255,0.6); padding: 10px 20px; border-radius: 12px;">
+    Café com Trans é uma marca registrada desde 2020
+  </p>
 
 </body>
 </html>
