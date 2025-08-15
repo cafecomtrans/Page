@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w,d,s,l,i){
+      w[l]=w[l]||[];
+      w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});
+      var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),
+          dl=l!='dataLayer'?'&l='+l:'';
+      j.async=true;
+      j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+      f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-MBKH4NN6');
+  </script>
+  <!-- End Google Tag Manager -->
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Café com Trans</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Helvetica Neue', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      background-image: url('background.jpeg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      min-height: 100vh;
+      padding: 20px;
+      backdrop-filter: brightness(1.1);
+    }
+
+    h1 {
+      margin-top: 20px;
+      font-size: 2.5em;
+      color: #222;
+      background-color: rgba(255,255,255,0.7);
+      padding: 10px 20px;
+      border-radius: 12px;
+    }
+
+    .player {
+      max-width: 800px;
+      width: 100%;
+      margin: 20px 0;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+      border-radius: 12px;
+      overflow: hidden;
+      background: rgba(255, 255, 255, 0.85);
+    }
+
+    iframe { border: none; }
+
+    .spotify-player { height: 80px; }
+    .youtube-player { height: 400px; }
+
+    /* ——— novo botão com gradiente + hover ——— */
+    .botao {
+      background: linear-gradient(to right, #4a90e2, #d45bb1);
+      color: white;
+      padding: 15px 35px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      font-size: 1.2em;
+      transition: background 0.3s ease, transform 0.2s ease;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+      margin-top: 30px;
+    }
+
+    .botao:hover {
+      background: linear-gradient(to right, #d45bb1, #4a90e2);
+      transform: scale(1.05);
+    }
+
+    .icons-container {
+      margin-top: 30px;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      max-width: 500px;
+    }
+
+    .icons-container p {
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #888;
+    }
+
+    .icons-container div {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .icons-container a img {
+      width: 36px;
+      height: 36px;
+      border-radius: 12px;
+      padding: 6px;
+      background-clip: padding-box;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .icons-container a img:hover {
+      transform: scale(1.4);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.35);
+    }
+  </style>
+</head>
+
+<body>
+  <h1>🎙️ Café com Trans</h1>
+
+  <!-- (Conteúdo preservado…) -->
+
+  <div class="player">
+    <iframe class="youtube-player" src="https://www.youtube.com/embed/RhcC9IlhLKk" allowfullscreen></iframe>
+  </div>
+  <div class="player">
+    <iframe class="spotify-player" src="https://open.spotify.com/embed/show/1L8fqj2umqryEpcCYeJs8m?utm_source=generator&theme=0"></iframe>
+  </div>
+
+  <!-- novo botão -->
+  <button class="botao" onclick="window.location.href='https://cafecomtrans.wordpress.com'">Entrar no site</button>
+
+  <p style="margin-top: 40px; font-size: 0.9em; color: #333; background-color: rgba(255,255,255,0.6); padding: 10px 20px; border-radius: 12px;">
+    Café com Trans é uma marca registrada desde 2020
+  </p>
+</body>
+</html>
