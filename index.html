@@ -1,6 +1,19 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Café com Trans</title>
+  
+  <!-- Script de redirecionamento primeiro -->
+  <script>
+    if (/Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+      window.location.href = "https://m.cafecomtrans.com.br";
+    } else {
+      window.location.href = "https://www.cafecomtrans.com";
+    }
+  </script>  
+  
   <!-- Google Tag Manager -->
   <script>
     (function(w,d,s,l,i){
@@ -24,28 +37,6 @@
     gtag('js', new Date());
     gtag('config', 'G-RXF4E32FBY');
   </script>
-
-    <!-- Script de redirecionamento -->
-      <script>
-       const isMobile = /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
-        if (isMobile) {
-        // Redireciona usuários mobile
-        window.location.href = "https://www.cafecomtrans.com.br";
-        } else {
-        // Redireciona usuários desktop
-         window.location.href = "https://gutiamandaes.github.io/main/index.html";
-        }
-      </script>
-
-
-
-
-
-    
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Café com Trans</title>
-
   <style>
     body {
       margin: 0;
